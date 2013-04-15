@@ -174,7 +174,7 @@ class SimpleJSONRPCRequestHandler(
             response = fault.response()
         if response == None:
             response = ''
-        self.send_header("Content-type", "application/json-rpc")
+        self.send_header("Content-type", "application/json")
         self.send_header("Content-length", str(len(response)))
         self.end_headers()
         self.wfile.write(response)
